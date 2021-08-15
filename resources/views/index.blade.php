@@ -18,7 +18,6 @@
 
             </div>
 
-
             @if (session()->has('message'))
                 <div class="alert alert-success alert-dismissable" id="alert">
                     {{ session()->get('message') }}
@@ -32,8 +31,6 @@
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
 
                 </div>
-
-
 
             @endif
             @forelse ($books as $book)
