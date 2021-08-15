@@ -1,0 +1,11 @@
+.blogs {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.blog-image {
+    width: 100%;
+    min-height: 300px;
+}
+.edit-form {
+    display: none;
+}
