@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $id = auth()->user()->id;
-        $publishes = User::find($id);
+        $publishes = User::orderBy('id', 'desc')->find($id);
         $all_published = $publishes->getBooks;
 
         return view('home', ['all_published' =>  $all_published]);

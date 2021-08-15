@@ -28,7 +28,7 @@
 
             <div class="form-group">
                 <button onclick="closeAlert()" class="btn btn-primary mr-2">Update</button>
-                <a class="btn  btn-dark mr-2" href="/">Cancel</a>
+                <a class="btn  btn-dark mr-2" href="/home">Cancel</a>
                 <button form="delete-post" onclick="return confirm('Are you sure you want to delete?');"
                     class="btn btn-danger">Delete</button>
             </div>

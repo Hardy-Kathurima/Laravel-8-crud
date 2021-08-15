@@ -18,7 +18,7 @@ class BookController extends Controller
         if (!empty($search)) {
             $books = Book::with('user')->where('title', 'LIKE', "%{$search}%")->paginate(5);
         } else {
-            $books = Book::paginate(5);
+            $books = Book::orderBy('id', 'desc')->paginate(5);
         }
         return view('index', ['books' => $books]);
     }
@@ -51,7 +51,7 @@ class BookController extends Controller
             'author' => request('author'),
             'genre' => request('genre')
         ]);
-        return redirect('/')->with('message', 'The book was updated successfully');
+        return redirect('/home')->with('message', 'The book was updated successfully');
     }
 
     public function store()
@@ -71,19 +71,12 @@ class BookController extends Controller
             'author' => request('author'),
             'genre' => request('genre')
         ]);
-        return redirect('/')->with('message', 'Book published successfully');
+        return redirect('/home')->with('message', 'Book published successfully');
     }
 
     public  function destroy(Book  $book)
     {
         $book->delete();
-        return redirect('/')->with('delete', ' The book has been deleted');
+        return redirect('/home')->with('delete', ' The book has been deleted');
     }
-
-    // public function search()
-    // {
-    //     $search_name = $_GET['search'];
-    //     $books = Book::with('user')->where('title', 'LIKE', '%' . $search_name . '%')->paginate(5);
-    //     return view('index', ['books' => $books]);
-    // }
 }

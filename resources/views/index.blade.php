@@ -5,7 +5,7 @@
         <div class="content w-50 mx-auto ">
 
             <div class="row mt-3 mb-3">
-                <div class=" col-4 "> <a class="btn btn-success mb-2 text-center " href="/create"> + Add a book</a>
+                <div class=" col-4 "> <a class="btn btn-success mb-2 text-center " href="/home"> My books</a>
 
                 </div>
                 <div class="col">
